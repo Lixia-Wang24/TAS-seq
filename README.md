@@ -11,3 +11,4 @@ structural variations and compartment-specific regulation of RNA stability. scTA
 to gRNA optimization in the CRISPR/Cas13d system. Our method provides insights into compartment-specific RNA structural dynamics, cell-specific heterogeneity, and their functional implications.
 
 # This scripts
+The analysis script here includes the initial processing steps for TAS-seq data, covering data download, preprocessing, quality control (QC), and gene expression quantification.
