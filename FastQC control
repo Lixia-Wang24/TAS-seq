@@ -1,0 +1,5 @@
+Input_dir="/Users/lixia/Data/data/TAS_seq/fastq"
+Out_fastQC_dir="/Users/lixia/data/data/TAS_seq/fastQC"
+mkdir -p "$Out_fastQC_dir"
+find "$Input_dir" -name "*.fastq.gz" | \
+parallel -j 8 "fastqc {} -o $Out_fastQC_dir"
