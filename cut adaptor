@@ -1,0 +1,8 @@
+Input_dir="/Users/lixia/Data/data/TAS_seq/fastq"
+Out_fastQC_dir="/Users/lixia/data/data/TAS_seq/cutadaptor"
+mkdir -p "$Out_fastQC_dir"
+sample="SRR30892944 SRR30892945 SRR30892946 SRR30892947"
+for s in $sample
+do
+cutadapt -n 1 -e 0.1 -O 2 -m 16 -a AGATCGGAAGAGCACACGTCT -A AGATCGGAAGAGCGTCGTGT  -o $Out_fastQC_dir/$s.1.fastq.clipper.gz -p $Out_fastQC_dir/$s.2.fastq.clipper.gz $Input_dir/${s}_1.fastq.gz $Input_dir/${s}_2.fastq.gz > $Out_fastQC_dir/$s.clipper.log
+done
